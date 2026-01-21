@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wiki Search</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <h1>🔎 Learn with Wikipedia</h1>
+  <nav>
+    <a href="index.html">Quiz</a>
+    <a href="wiki.html">Wikipedia Search</a>
+    <a href="technology.html">Technology</a>
+  </nav>
+</header>
+
+<section class="wiki-card">
+  <h2>Search Anything 🌍</h2>
+  <input type="text" id="search" placeholder="Type a word (e.g. Africa)">
+  <button onclick="searchWiki()">Search Wikipedia</button>
+</section>
+
+<script>
+function searchWiki() {
+  const keyword = document.getElementById("search").value;
+  if (!keyword) return;
+  window.open("https://en.wikipedia.org/wiki/" + keyword, "_blank");
+}
+</script>
+
+</body>
+</html>
